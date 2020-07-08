@@ -5,26 +5,35 @@ import {
   getRandomColor,
   defaultProvinceColor
 } from '../helpers/color'
+import { DistrictMapDataInteface } from '../metadatas/interfaces'
+
+interface AcceptableProps{
+  onMapClick? ( clickLocation : DistrictMapDataInteface ) : any;
+  randomSectorColor: boolean;
+  sectorClassName: string;
+  containerClassName?: string;
+  color: string | null | undefined;
+  hoverColor: string;
+  provinceColor: string;
+  stroke: string;
+  strokeWidth : string;
+}
 
 export default function DistrictMap({
   onMapClick,
   randomSectorColor,
-  sectorClassName,
-  containerClassName,
+  sectorClassName="",
+  containerClassName = "",
   color,
   hoverColor,
   provinceColor,
-  stroke,
-  strokeWidth
-}) {
-  const handleMapClick = (item) => {
-    if (onMapClick) {
-      onMapClick({ name: item.name, zip: item.zip, province: item.province })
-    }
-  }
+  stroke = "#000",
+  strokeWidth = "1px"
+} : AcceptableProps) {
+  
 
   return (
-    <div style={{ maxWidth: '100%' }} className={containerClassName || ''}>
+    <div style={{ maxWidth: '100%' }} className={containerClassName}>
       <svg viewBox='0 0 1026.077 519.136'>
         <g transform='translate(-52.379 -15.971)'>
           {districtMapData.map((item, index) => {
@@ -38,20 +47,22 @@ export default function DistrictMap({
 
             return (
               <path
-                className={sectorClassName || ''}
+                className={sectorClassName}
                 style={{ cursor: 'pointer', fill: pathColor }}
                 key={index}
-                stroke={stroke || '#000'}
-                strokeWidth={strokeWidth || '1px'}
+                stroke={stroke}
+                strokeWidth={strokeWidth}
                 d={item.shape}
                 onMouseOver={(event) => {
-                  event.target.style.fill = hoverColor || defaultColor
+                  const x = event.target as HTMLElement 
+                  x.style.fill = hoverColor || defaultColor
                 }}
-                onClick={() => handleMapClick(item)}
-                onMouseOut={(event) => {
-                  event.target.style.fill = pathColor
+                onClick={() => onMapClick(item)}
+                onMouseOut={(event) => { 
+                  const x = event.target as HTMLElement 
+                  x.style.fill = pathColor
                 }}
-              ></path>
+              />
             )
           })}
         </g>

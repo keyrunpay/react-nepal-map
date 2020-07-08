@@ -1,4 +1,6 @@
-const districtMapData = [
+import { DistrictMapDataInteface } from "./interfaces"
+
+const districtMapData : DistrictMapDataInteface[] = [
   {
     name: 'Jhapa',
     zip: 57200,

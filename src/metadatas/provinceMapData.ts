@@ -1,4 +1,6 @@
-const provinceMapData = [
+import { ProvinceMapDataInterface } from "./interfaces"
+
+const provinceMapData  : ProvinceMapDataInterface[] = [
   {
     name: 'Province 1',
     zip: 56600,

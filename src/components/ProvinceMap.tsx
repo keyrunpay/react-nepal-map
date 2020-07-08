@@ -5,6 +5,19 @@ import {
   defaultColor,
   defaultProvinceColor
 } from '../helpers/color'
+import { ProvinceMapDataInterface } from '../metadatas/interfaces'
+
+interface AcceptableProps{
+  onMapClick? ( clickLocation : ProvinceMapDataInterface ) : any;
+  randomSectorColor: boolean;
+  sectorClassName: string;
+  containerClassName?: string;
+  color: string | null | undefined;
+  hoverColor: string;
+  provinceColor: string;
+  stroke: string;
+  strokeWidth : string;
+}
 
 export default function ProvinceMap({
   onMapClick,
@@ -16,12 +29,8 @@ export default function ProvinceMap({
   provinceColor,
   stroke,
   strokeWidth
-}) {
-  const handleMapClick = (item) => {
-    if (onMapClick) {
-      onMapClick({ name: item.name, zip: item.zip })
-    }
-  }
+}:AcceptableProps) {
+ 
 
   return (
     <div style={{ maxWidth: '100%' }} className={containerClassName || ''}>
@@ -44,13 +53,15 @@ export default function ProvinceMap({
               strokeWidth={strokeWidth || '1px'}
               d={item.shape}
               onMouseOver={(event) => {
-                event.target.style.fill = hoverColor || defaultColor
+                const x = event.target as HTMLElement 
+                  x.style.fill = hoverColor || defaultColor
               }}
-              onClick={() => handleMapClick(item)}
+              onClick={() => onMapClick(item)}
               onMouseOut={(event) => {
-                event.target.style.fill = pathColor
+                const x = event.target as HTMLElement 
+                  x.style.fill = pathColor
               }}
-            ></path>
+            />
           )
         })}
       </svg>

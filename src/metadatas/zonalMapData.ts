@@ -1,5 +1,7 @@
-const zonalMapData = [
-  {
+import { ZoneMapDataInteface } from "./interfaces"
+
+const zonalMapData : ZoneMapDataInteface[] = [
+  { 
     name: 'Mechi',
     code: 'ME',
     shape:

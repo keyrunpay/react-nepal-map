@@ -1,6 +1,19 @@
 import React from 'react'
 import zonalMapData from '../metadatas/zonalMapData'
 import { defaultColor, getRandomColor } from '../helpers/color'
+import { ZoneMapDataInteface } from '../metadatas/interfaces'
+
+interface AcceptableProps{
+  onMapClick? ( clickLocation : ZoneMapDataInteface ) : any;
+  randomSectorColor: boolean;
+  sectorClassName: string;
+  containerClassName?: string;
+  color: string | null | undefined;
+  hoverColor: string;
+  provinceColor: string;
+  stroke: string;
+  strokeWidth : string;
+}
 
 export default function ZonalMap({
   onMapClick,
@@ -11,12 +24,8 @@ export default function ZonalMap({
   hoverColor,
   stroke,
   strokeWidth
-}) {
-  const handleMapClick = (item) => {
-    if (onMapClick) {
-      onMapClick({ name: item.name, code: item.code })
-    }
-  }
+}:AcceptableProps) {
+  
   return (
     <div style={{ maxWidth: '100%' }} className={containerClassName || ''}>
       <svg viewBox='0 0 799.861 460.414'>
@@ -40,13 +49,15 @@ export default function ZonalMap({
                 strokeWidth={strokeWidth || '1px'}
                 d={item.shape}
                 onMouseOver={(event) => {
-                  event.target.style.fill = hoverColor || defaultColor
+                  const x = event.target as HTMLElement 
+                  x.style.fill = hoverColor || defaultColor
                 }}
-                onClick={() => handleMapClick(item)}
+                onClick={() => onMapClick(item)}
                 onMouseOut={(event) => {
-                  event.target.style.fill = pathColor
+                  const x = event.target as HTMLElement 
+                  x.style.fill = pathColor
                 }}
-              ></path>
+              />
             )
           })}
         </g>
