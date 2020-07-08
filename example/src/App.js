@@ -8,11 +8,11 @@ const App = () => {
         hoverColor='red'
         stroke='#000'
         strokeWidth={1}
-        onMapClick={(val) => console.log(val)}
+        onMapClick={(val) => alert(JSON.stringify(val))}
       />
       <ZonalMap
         hoverColor='red'
-        onMapClick={(val) => console.log(val)}
+        onMapClick={(val) => alert(JSON.stringify(val))}
         stroke='#000'
         strokeWidth={1}
       />
@@ -20,7 +20,7 @@ const App = () => {
         hoverColor='red'
         stroke='#000'
         strokeWidth={1}
-        onMapClick={(val) => console.log(val)}
+        onMapClick={(val) => alert(JSON.stringify(val))}
       />
     </div>
   )

@@ -10,6 +10,10 @@
 npm install --save react-nepal-map
 ```
 
+## Live Demo
+
+[https://keyrunpay.github.io/react-nepal-map](https://keyrunpay.github.io/react-nepal-map)
+
 ## Usage
 
 ```jsx
@@ -44,6 +48,18 @@ const App = () => {
 
 export default App
 ```
+
+## About Author
+
+Kiran Neupane
+tokeyrun@gmail.com
+[Facebook](https://facebook.com/kiran.neupz)
+
+### React Tutor @ Youtube
+
+Channel Name: Buggged
+[Youtube](https://www.youtube.com/channel/UChvdEZeMyLPhZ0Jt_K3RCyQ)
+[Website](https://buggged.com)
 
 ## License
 
