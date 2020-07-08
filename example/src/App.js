@@ -1,10 +1,29 @@
 import React from 'react'
-
-import { ExampleComponent } from 'react-nepal-map'
-import 'react-nepal-map/dist/index.css'
+import { ProvinceMap, ZonalMap, DistrictMap } from 'react-nepal-map'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <div>
+      <ProvinceMap
+        hoverColor='red'
+        stroke='#000'
+        strokeWidth={1}
+        onMapClick={(val) => console.log(val)}
+      />
+      <ZonalMap
+        hoverColor='red'
+        onMapClick={(val) => console.log(val)}
+        stroke='#000'
+        strokeWidth={1}
+      />
+      <DistrictMap
+        hoverColor='red'
+        stroke='#000'
+        strokeWidth={1}
+        onMapClick={(val) => console.log(val)}
+      />
+    </div>
+  )
 }
 
 export default App

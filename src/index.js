@@ -1,6 +1,5 @@
-import React from 'react'
-import styles from './styles.module.css'
+import ProvinceMap from './components/ProvinceMap'
+import DistrictMap from './components/DistrictMap'
+import ZonalMap from './components/ZonalMap'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export { ProvinceMap, ZonalMap, DistrictMap }
