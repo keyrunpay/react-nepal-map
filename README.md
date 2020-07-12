@@ -10,6 +10,10 @@
 npm install --save react-nepal-map
 ```
 
+## Live Demo
+
+[https://keyrunpay.github.io/react-nepal-map](https://keyrunpay.github.io/react-nepal-map)
+
 ## Usage
 
 ```jsx
@@ -45,6 +49,7 @@ const App = () => {
 export default App
 ```
 
+
 ## TypeScript
 
 TypeScript type definition was add to the [DefinitelyTyped repository](https://github.com/DefinitelyTyped/DefinitelyTyped)
@@ -58,6 +63,18 @@ npm install --save @types/react-nepal-map
 ## Contributors
 
 <a href="https://github.com/ashiishme"><img src="https://avatars1.githubusercontent.com/u/18111862?s=460&u=2f3e78032c535d11cf6c6be111ed4042e88326c9&v=4" title="ashiishme" width="60" height="60"></a>
+=======
+## About Author
+
+Kiran Neupane
+tokeyrun@gmail.com
+[Facebook](https://facebook.com/kiran.neupz)
+
+### React Tutor @ Youtube
+
+Channel Name: Buggged
+[Youtube](https://www.youtube.com/channel/UChvdEZeMyLPhZ0Jt_K3RCyQ)
+[Website](https://buggged.com)
 
 ## License
 
