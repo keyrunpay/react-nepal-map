@@ -49,6 +49,21 @@ const App = () => {
 export default App
 ```
 
+
+## TypeScript
+
+TypeScript type definition was add to the [DefinitelyTyped repository](https://github.com/DefinitelyTyped/DefinitelyTyped)
+
+contributed by: [ashiishme](https://github.com/ashiishme)
+
+```bash
+npm install --save @types/react-nepal-map
+```
+
+## Contributors
+
+<a href="https://github.com/ashiishme"><img src="https://avatars1.githubusercontent.com/u/18111862?s=460&u=2f3e78032c535d11cf6c6be111ed4042e88326c9&v=4" title="ashiishme" width="60" height="60"></a>
+=======
 ## About Author
 
 Kiran Neupane
