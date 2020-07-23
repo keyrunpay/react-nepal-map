@@ -63,6 +63,8 @@ npm install --save @types/react-nepal-map
 
 <a href="https://github.com/ashiishme"><img src="https://avatars1.githubusercontent.com/u/18111862?s=460&u=2f3e78032c535d11cf6c6be111ed4042e88326c9&v=4" title="ashiishme" width="60" height="60"></a>
 
+<a href="https://github.com/anwesh-b"><img src="https://avatars3.githubusercontent.com/u/45763486?s=400&v=4" title="anwesh-b" width="60" height="60"></a>
+
 ## About Author
 
 <a href="https://github.com/keyrunpay"><img src="https://avatars0.githubusercontent.com/u/41059790?s=460&u=fceee26bdb0e5dd6b3b57120fa7295ddcd82d878&v=4" title="keyrunpay" width="60" height="60"></a>
