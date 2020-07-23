@@ -19,7 +19,7 @@ export default function DistrictMap({
 }) {
   const handleMapClick = (item) => {
     if (onMapClick) {
-      onMapClick({ name: item.name, zip: item.zip, province: item.province })
+      onMapClick({ name: item.name, zip: item.zip, province: item.province, area: item.area })
     }
   }
 
